@@ -28,8 +28,14 @@
 	<div class="container">
 		<h3>CRM/WEB Cadastro de Clientes</h3> 
 		<%@include file="navbar.jsp"%>
+		<p style="color:blue"><% String mensagem = (String) request.getAttribute("mensagem");
+			if(mensagem != null) {
+				out.println(mensagem);
+			}
+		%></p>
 		<div class="mb-3">
-			<label for="noneFormControlInput" class="form-label">None:</label> 
+			<h6><label for="noneFormControlInput" class="form-label">None:</label></h6> 
+			
 			<%
 				String nome = (String) request.getAttribute("nome");
 					if(nome != null) {
@@ -38,7 +44,8 @@
 			%>
 		</div>
 		<div classe"ab-3">
-			<label for="cpfFormControlInput" class="form-label">CPF:</label> 
+			<h6><label for="cpfFormControlInput" class="form-label">CPF:</label></h6> 
+			
 			<%
 				String cpf = (String) request.getAttribute("cpf");
 					if(cpf != null) {
@@ -48,7 +55,8 @@
 	
 		</div>
 		<div class="mb-3">
-			<label for="emailFormControlInput" class="form-label">E-mail:</label> 
+			<h6><label for="emailFormControlInput" class="form-label">E-mail:</label></h6>
+			 
 			<%
 				String email = (String) request.getAttribute("email");
 					if(email != null) {
@@ -57,7 +65,8 @@
 			%>			
 		</div>
 		<div class="mb-3">
-			<label for="telefoneFormControlInput" class="form-label">Telefone:</label>
+			<h6><label for="telefoneFormControlInput" class="form-label">Telefone:</label></h6>
+			
 			<%
 				String telefone = (String) request.getAttribute("telefone");
 					if(telefone != null) {
@@ -67,7 +76,8 @@
 			
 		</div>
 		<div class="mb-3">
-			<label for="dataFormControlInput" class="form-label">Data de Nascimento:</label> 
+			<h6><label for="dataFormControlInput" class="form-label">Data de Nascimento:</label></h6> 
+			
 			<%
 				String dataNascimento = (String) request.getAttribute("dataNascimento");
 					if(dataNascimento != null) {
@@ -77,7 +87,8 @@
 			
 		</div>
 		<div class="mb-3">
-			<label for="dataFormControlInput" class="form-label">Gênero:</label> <div class="form-check">
+			<h6><label for="dataFormControlInput" class="form-label">Gênero:</label></h6> 
+						
 			<%
 				String genero = (String) request.getAttribute("genero");
 					if(genero != null) {
@@ -86,7 +97,8 @@
 			%>
 		</div>
 		<div class="mb-3">
-			<label for="enderecoFormControlTextarea" class="form-label">Endereco:</label> 
+			<h6><label for="enderecoFormControlTextarea" class="form-label">Endereco:</label></h6> 
+			
 			<%
 				String endereco = (String) request.getAttribute("endereco");
 					if(endereco != null) {
